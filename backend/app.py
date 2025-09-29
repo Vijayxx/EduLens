@@ -46,8 +46,7 @@ def health():
 @app.route("/api/students")
 def get_students():
     q = text("""
-        SELECT student_id, name, entry_gpa, socio_econ, course_id, course_code, 
-               attendance_pct, final_score, at_risk
+        SELECT student_id, name, entry_gpa, socio_econ, course_id, course_code, attendance_pct, final_score, at_risk
         FROM student_features
         LIMIT 2000;
     """)
